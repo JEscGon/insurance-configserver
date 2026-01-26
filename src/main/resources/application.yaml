@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: insurance_configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JEscGon/insurance-configserver
+server:
+  port: 8888
