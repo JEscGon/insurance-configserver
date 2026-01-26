@@ -2,6 +2,8 @@ spring:
   application:
     name: insurance_configserver
   cloud:
+    compatibility-verifier:
+      enabled: false
     config:
       server:
         git:
@@ -10,7 +12,10 @@ spring:
           search-paths:
             - config
           clone-on-start: true
-        compatibility-verifier:
-          enabled: false
 server:
   port: 8888
+
+logging:
+  level:
+    org.springframework.cloud.config.server: DEBUG
+    org.eclipse.jgit: INFO
