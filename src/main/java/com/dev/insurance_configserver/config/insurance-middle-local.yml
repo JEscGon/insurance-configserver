@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+rest:
+  client:
+    core:
+      users:
+        host: ${USERS_SERVICE_URL:http://localhost:8080}
+      thirdUsers:
+        host: ${USERS_SERVICE_URL:http://localhost:8080}
+      vehicle:
+        host: ${USERS_SERVICE_URL:http://localhost:8080}
+      thirdVehicle:
+        host: ${USERS_SERVICE_URL:http://localhost:8080}
+      policies:
+        host: ${POLICIES_SERVICE_URL:http://localhost:8081}
+      parts:
+        host: ${POLICIES_SERVICE_URL:http://localhost:8081}
