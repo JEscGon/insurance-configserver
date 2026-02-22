@@ -1,9 +1,7 @@
 spring:
   application:
-    name: insurance_configserver
+    name: insurance-configserver
   cloud:
-    compatibility-verifier:
-      enabled: false
     config:
       server:
         git:
@@ -12,8 +10,15 @@ spring:
           search-paths:
             - config
           clone-on-start: true
+
 server:
   port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
 
 logging:
   level:
